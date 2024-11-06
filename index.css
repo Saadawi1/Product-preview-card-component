@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    background-color: var(--Cream);
+    display: flex;
+    font-size: 14px;
+    font-family: "Fraunces", serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card{
+    width: 640px;
+    height: 478px;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    background-color: var(--White);
+    overflow: hidden;
+}
+.card .des-img{
+    height: 478px;
+}
+.card .mob-img{
+    display: none;
+}
+.section-right{
+    padding: 30px;
+}
+.section-right h1{
+    font-size: 20px;
+    color: var(--Dark-grayish-blue);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.name{
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: 1.5rem;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+}
+.section-right .desc{
+    color: var(--Dark-grayish-blue);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    width: 240px;
+}
+.section-right .price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+}
+.section-right .price .new{
+    color: var(--Dark-cyan);
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Fraunces", serif;
+}
+.section-right .price .old{
+    color: var(--Dark-grayish-blue);
+    text-decoration: line-through;
+}
+.section-right button{
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    margin-top: 1.5rem;
+    padding: 20px 15px;
+    width: 240px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+button:hover{
+    cursor: pointer;
+    background-color: hsl(158,36%,17%);
+    transition-duration: 0.5s;
+}
+@media (max-width:425px){
+    body{
+        height: 100%;
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        margin-top: 2rem;
+        height: 100%;
+        margin-bottom: 2rem;
+    }
+    .des-img{
+        display: none;
+    }
+    .card .mob-img{
+        display: block;
+        width: 350px;
+    }
+    .section-right h1{
+        font-size: 14px;
+        margin-bottom: 1rem;
+    }
+    .name{
+        font-size: 30px;
+    }
+    .desc{
+        width: 295px;
+
+    }
+    
+    .section-right button{
+        width: 250px;
+        
+    }
+}
